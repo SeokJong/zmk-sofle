@@ -91,14 +91,14 @@
 
         layer_2 {
             bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
+&kp GRAVE  &kp EXCL   &kp AT    &kp HASH  &kp DLLR   &kp PRCNT    &trans  &kp CARET  &kp AMPS   &kp ASTRK  &kp MINUS  &kp PLUS   &kp EQUAL
+&trans     &kp TILDE  &kp LT    &kp LBRC  &kp LPAR   &kp LBKT     &trans  &kp RBKT   &kp RPAR   &kp RBRC   &kp GT     &kp UNDER  &kp PIPE
+&trans     &trans     &kp SQT   &kp DQT   &kp COLON  &kp SEMI     &trans  &kp FSLH   &kp BSLH   &kp QMARK  &trans     &trans     &trans
+&trans     &trans     &trans    &trans    &trans     &trans       &trans  &trans     &trans     &trans     &trans     &trans     &trans
+&trans     &trans     &trans    &trans    &trans     &trans       &trans  &trans     &trans     &trans     &trans     &trans
             >;
 
-            display-name = "layer2";
+            display-name = "SYM";
             sensor-bindings = <&scroll_encoder>;
         };
 
