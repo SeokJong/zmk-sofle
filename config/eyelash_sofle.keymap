@@ -109,7 +109,7 @@
             bindings = <
 &td_esc_grave   &kp N1      &kp N2      &kp N3       &kp N4       &kp N5       &kp UP_ARROW     &kp N6   &kp N7       &kp N8       &kp N9      &kp N0         &kp BACKSPACE
 &kp TAB         &kp Q       &kp W       &kp E        &kp R        &kp T        &kp DOWN_ARROW   &kp Y    &kp U        &kp I        &kp O       &kp P          &kp BSLH
-&ht LCTRL CAPS  &ht LGUI A  &ht LALT S  &ht LCTRL D  &ht LSHFT F  &ht LANG1 G  &kp LEFT_ARROW   &ht LANG1 H  &ht RSHFT J  &ht RCTRL K  &ht RALT L  &ht RGUI SEMI  &kp APOS
+&ht LCTRL CAPS  &ht LGUI A  &ht LALT S  &ht LCTRL D  &ht LSHFT F  &ht LANG1 G  &kp LEFT_ARROW   &ht LANG1 H  &ht LSHFT J  &ht LCTRL K  &ht LALT L  &ht LGUI SEMI  &kp APOS
 &kp LSHFT       &kp Z       &kp X       &kp C        &kp V        &kp B        &kp RIGHT_ARROW  &kp N    &kp M        &kp COMMA    &kp DOT     &kp FSLH       &ht RET RIGHT_SHIFT
 &kp C_MUTE      &mo 4       &mo 3       &mo 2        &mo 1        &kp SPACE    &kp ENTER        &kp RET  &kp SPACE    &mo 1        &mo 2       &kp DELETE
             >;
@@ -122,7 +122,7 @@
             bindings = <
 &kp GRAVE  &kp EXCL   &kp AT   &kp HASH  &kp DLLR   &kp PRCNT    &trans  &kp CARET  &kp AMPS  &kp ASTRK  &kp MINUS  &kp PLUS   &kp EQUAL
 &trans     &kp TILDE  &kp LT   &kp LBRC  &kp LPAR   &kp LBKT     &trans  &kp RBKT   &kp RPAR  &kp RBRC   &kp GT     &kp UNDER  &kp PIPE
-&trans     &trans     &kp SQT  &kp DQT   &kp COLON  &kp SEMI     &trans  &kp FSLH   &kp BSLH  &kp QMARK  &trans     &trans     &trans
+&trans     &trans     &kp SQT  &kp DQT   &kp COLON  &kp SEMI     &trans  &kp FSLH   &kp BSLH  &kp QMARK  &kp LANG2  &trans     &trans
 &trans     &trans     &trans   &trans    &trans     &trans       &trans  &trans     &trans    &trans     &trans     &trans     &trans
 &trans     &trans     &trans   &trans    &trans     &trans       &trans  &trans     &trans    &trans     &trans     &trans
             >;
