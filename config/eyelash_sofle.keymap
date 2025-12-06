@@ -67,13 +67,13 @@
 
         caps_word {
             bindings = <&caps_word>;
-            key-positions = <30 33>;  // F(30) + J(33) 홈로우 Shift 위치
+            key-positions = <30 34>;  // F(30) + J(34) 홈로우 Shift 위치
             timeout-ms = <50>;
         };
 
         combo_esc {
             bindings = <&kp ESC>;
-            key-positions = <33 34>;  // J(33) + K(34)
+            key-positions = <34 35>;  // J(34) + K(35)
             timeout-ms = <50>;
         };
 
