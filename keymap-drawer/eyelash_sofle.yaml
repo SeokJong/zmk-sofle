@@ -400,4 +400,4 @@ combos:
 - p: [29, 30]
   k: $$mdi:keyboard-tab$$
 - p: [53, 54]
-  k: $$mdi:gamepad-variant$$
+  k: {t: GAME, h: toggle}
