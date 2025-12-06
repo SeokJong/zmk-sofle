@@ -328,9 +328,9 @@ layers:
 combos:
 - p: [14, 28, 40]
   k: '&soft_off'
-- p: [30, 33]
+- p: [30, 34]
   k: $$mdi:alpha-w-box$$
-- p: [33, 34]
+- p: [34, 35]
   k: $$mdi:keyboard-esc$$
 - p: [29, 30]
   k: $$mdi:keyboard-tab$$
