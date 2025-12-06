@@ -1,18 +1,26 @@
-name: Draw Keymap
+# =====================================================
+# 키맵 시각화 워크플로우
+# 키맵 변경 시 자동으로 SVG 이미지를 생성합니다
+# =====================================================
+name: 키맵 그리기
+
 on:
+  # 수동 실행 허용
   workflow_dispatch:
+  # 특정 파일 변경 시 자동 실행
   push:
     paths:
-      - "config/**"
-      - .github/workflows/draw.yml
-      - keymap_drawer.config.yaml
+      - "config/**"                      # config 폴더 내 파일 변경
+      - .github/workflows/draw.yml       # 이 워크플로우 파일 변경
+      - keymap_drawer.config.yaml        # 키맵 드로어 설정 변경
 
 jobs:
   draw:
+    # keymap-drawer 공식 워크플로우 사용
     uses: caksoylar/keymap-drawer/.github/workflows/draw-zmk.yml@main
     permissions:
-      contents: write
+      contents: write                    # 저장소에 커밋 권한 필요
     with:
       commit_message: "[Draw] ${{ github.event.head_commit.message }}"
-      destination: "commit"
-      fail_on_error: ${{ fromJSON(true) }}
+      destination: "commit"              # 생성된 SVG를 커밋으로 저장
+      fail_on_error: ${{ fromJSON(true) }}  # 오류 발생 시 실패 처리

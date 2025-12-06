@@ -1,11 +1,18 @@
-name: Build ZMK firmware
+# =====================================================
+# ZMK 펌웨어 빌드 워크플로우
+# 키맵 파일 변경 시 자동으로 펌웨어를 빌드합니다
+# =====================================================
+name: ZMK 펌웨어 빌드
+
 on:
+  # 수동 실행 허용
   workflow_dispatch:
+  # 푸시 시 자동 실행 (keymap-drawer 폴더 제외)
   push:
     paths-ignore:
       - "keymap-drawer/**"
 
 jobs:
   build:
+    # ZMK 공식 빌드 워크플로우 사용
     uses: zmkfirmware/zmk/.github/workflows/build-user-config.yml@main
-

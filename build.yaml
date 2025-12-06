@@ -1,14 +1,27 @@
+# =====================================================
+# ZMK 펌웨어 빌드 설정
+# GitHub Actions에서 사용하는 빌드 매트릭스 정의
+# =====================================================
 ---
 include:
- # - board: eyelash_sofle_left
-#    shield: nice_view
+  # -------------------------------------------------
+  # 오른손 키보드 빌드
+  # -------------------------------------------------
   - board: eyelash_sofle_right
-#   shield: nice_view_custom
-    shield: nice_view
+    shield: nice_view                    # Nice!View 디스플레이 사용
+
+  # -------------------------------------------------
+  # 왼손 키보드 빌드 (ZMK Studio 지원)
+  # -------------------------------------------------
   - board: eyelash_sofle_left
-    shield: nice_view
-    snippet: studio-rpc-usb-uart
+    shield: nice_view                    # Nice!View 디스플레이 사용
+    snippet: studio-rpc-usb-uart         # ZMK Studio USB 통신 활성화
     cmake-args: -DCONFIG_ZMK_STUDIO=y -DCONFIG_ZMK_STUDIO_LOCKING=n
-    artifact-name: eyelash_sofle_studio_left
+    artifact-name: eyelash_sofle_studio_left  # 빌드 산출물 이름
+
+  # -------------------------------------------------
+  # 설정 초기화용 펌웨어
+  # 블루투스 페어링 문제 해결 시 사용
+  # -------------------------------------------------
   - board: nice_nano_v2
-    shield: settings_reset
+    shield: settings_reset               # 설정 초기화 쉴드
