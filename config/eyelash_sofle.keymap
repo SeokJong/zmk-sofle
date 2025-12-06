@@ -26,6 +26,8 @@
 #define KEY_Z 40
 #define KEY_J 34
 #define KEY_K 35
+#define KEY_L3 54  // Layer 3 (NUM) 버튼
+#define KEY_L4 53  // Layer 4 (SYS) 버튼
 
 &mmv_input_listener { input-processors = <&zip_xy_scaler 2 1>; };
 
@@ -100,6 +102,12 @@
             key-positions = <KEY_D KEY_F>;  // D + F
             timeout-ms = <50>;
         };
+
+        combo_gaming {
+            bindings = <&tog 5>;
+            key-positions = <KEY_L4 KEY_L3>;  // Layer 3 + Layer 4 동시 입력
+            timeout-ms = <50>;
+        };
     };
 
     keymap {
@@ -168,6 +176,19 @@
 
             display-name = "SYS";
             sensor-bindings = <&scroll_encoder>;
+        };
+
+        layer_5 {
+            bindings = <
+&kp ESC    &kp N1  &kp N2  &kp N3    &kp N4     &kp N5     &kp UP_ARROW     &kp N6   &kp N7     &kp N8     &kp N9   &kp N0    &kp BACKSPACE
+&kp TAB    &kp Q   &kp W   &kp E     &kp R      &kp T      &kp DOWN_ARROW   &kp Y    &kp U      &kp I      &kp O    &kp P     &kp BSLH
+&kp LCTRL  &kp A   &kp S   &kp D     &kp F      &kp G      &kp LEFT_ARROW   &kp H    &kp J      &kp K      &kp L    &kp SEMI  &kp APOS
+&kp LSHFT  &kp Z   &kp X   &kp C     &kp V      &kp B      &kp RIGHT_ARROW  &kp N    &kp M      &kp COMMA  &kp DOT  &kp FSLH  &kp RSHFT
+&kp C_MUTE &trans  &trans  &kp LALT  &kp SPACE  &kp SPACE  &kp ENTER        &kp RET  &kp SPACE  &trans     &trans   &kp DELETE
+            >;
+
+            display-name = "GAME";
+            sensor-bindings = <&inc_dec_kp C_VOLUME_UP C_VOL_DN>;
         };
     };
 };
