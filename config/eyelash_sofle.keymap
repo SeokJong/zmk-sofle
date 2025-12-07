@@ -18,6 +18,7 @@
  * Row 4: 39-51
  * Row 5: 52-63
  */
+
 #define KEY_Q 14
 #define KEY_W 15
 #define KEY_S 28
@@ -73,76 +74,89 @@
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
             tapping-term-ms = <200>;
-            bindings = <&kp ESC>, <&kp GRAVE>;  // 탭: ESC, 더블탭: `
+            bindings = <&kp ESC>, <&kp GRAVE>;
+  // 탭: ESC, 더블탭: `
         };
 
         // F키 탭댄스: 1탭=Fn, 2탭=Ctrl+Fn, 3탭=Alt+Fn
+
         td_f1: td_f1 {
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
             tapping-term-ms = <250>;
             bindings = <&kp F1>, <&kp LC(F1)>, <&kp LA(F1)>;
         };
+
         td_f2: td_f2 {
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
             tapping-term-ms = <250>;
             bindings = <&kp F2>, <&kp LC(F2)>, <&kp LA(F2)>;
         };
+
         td_f3: td_f3 {
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
             tapping-term-ms = <250>;
             bindings = <&kp F3>, <&kp LC(F3)>, <&kp LA(F3)>;
         };
+
         td_f4: td_f4 {
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
             tapping-term-ms = <250>;
             bindings = <&kp F4>, <&kp LC(F4)>, <&kp LA(F4)>;
         };
+
         td_f5: td_f5 {
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
             tapping-term-ms = <250>;
             bindings = <&kp F5>, <&kp LC(F5)>, <&kp LA(F5)>;
         };
+
         td_f6: td_f6 {
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
             tapping-term-ms = <250>;
             bindings = <&kp F6>, <&kp LC(F6)>, <&kp LA(F6)>;
         };
+
         td_f7: td_f7 {
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
             tapping-term-ms = <250>;
             bindings = <&kp F7>, <&kp LC(F7)>, <&kp LA(F7)>;
         };
+
         td_f8: td_f8 {
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
             tapping-term-ms = <250>;
             bindings = <&kp F8>, <&kp LC(F8)>, <&kp LA(F8)>;
         };
+
         td_f9: td_f9 {
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
             tapping-term-ms = <250>;
             bindings = <&kp F9>, <&kp LC(F9)>, <&kp LA(F9)>;
         };
+
         td_f10: td_f10 {
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
             tapping-term-ms = <250>;
             bindings = <&kp F10>, <&kp LC(F10)>, <&kp LA(F10)>;
         };
+
         td_f11: td_f11 {
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
             tapping-term-ms = <250>;
             bindings = <&kp F11>, <&kp LC(F11)>, <&kp LA(F11)>;
         };
+
         td_f12: td_f12 {
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
@@ -189,11 +203,11 @@
 
         layer0 {
             bindings = <
-&td_esc_grave   &kp N1      &kp N2      &kp N3       &kp N4       &kp N5       &kp UP_ARROW     &kp N6   &kp N7       &kp N8       &kp N9      &kp N0         &kp BACKSPACE
-&kp TAB         &kp Q       &kp W       &kp E        &kp R        &kp T        &kp DOWN_ARROW   &kp Y    &kp U        &kp I        &kp O       &kp P          &kp BSLH
-&ht LCTRL CAPS  &ht LGUI A  &ht LALT S  &ht LCTRL D  &ht LSHFT F  &ht LANG1 G  &kp LEFT_ARROW   &ht LANG1 H  &ht LSHFT J  &ht LCTRL K  &ht LALT L  &ht LGUI SEMI  &kp APOS
-&kp LSHFT       &kp Z       &kp X       &kp C        &kp V        &kp B        &kp RIGHT_ARROW  &kp N    &kp M        &kp COMMA    &kp DOT     &kp FSLH       &ht RET RIGHT_SHIFT
-&kp C_MUTE      &mo 4       &mo 3       &mo 2        &mo 1        &kp SPACE    &kp ENTER        &kp RET  &kp SPACE    &mo 1        &mo 2       &kp DELETE
+&td_esc_grave   &kp N1      &kp N2      &kp N3       &kp N4       &kp N5         &kp UP_ARROW     &kp N6       &kp N7       &kp N8       &kp N9      &kp N0         &kp BACKSPACE
+&kp TAB         &kp Q       &kp W       &kp E        &kp R        &kp T          &kp DOWN_ARROW   &kp Y        &kp U        &kp I        &kp O       &kp P          &kp BSLH
+&ht LCTRL CAPS  &ht LGUI A  &ht LALT S  &ht LCTRL D  &ht LSHFT F  &ht LANG1 G    &kp LEFT_ARROW   &ht LANG1 H  &ht LSHFT J  &ht LCTRL K  &ht LALT L  &ht LGUI SEMI  &kp APOS
+&kp LSHFT       &kp Z       &kp X       &kp C        &kp V        &kp B          &kp RIGHT_ARROW  &kp N        &kp M        &kp COMMA    &kp DOT     &kp FSLH       &ht RET RIGHT_SHIFT
+&kp C_MUTE      &mo 4       &mo 3       &mo 2        &mo 1        &kp SPACE      &kp ENTER        &kp RET      &kp SPACE    &mo 1        &mo 2       &kp DELETE
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOLUME_UP C_VOL_DN>;
@@ -204,7 +218,7 @@
             bindings = <
 &kp GRAVE  &kp EXCL   &kp AT   &kp HASH  &kp DLLR   &kp PRCNT    &trans  &kp CARET  &kp AMPS  &kp ASTRK  &kp MINUS  &kp PLUS   &kp EQUAL
 &trans     &kp TILDE  &kp LT   &kp LBRC  &kp LPAR   &kp LBKT     &trans  &kp RBKT   &kp RPAR  &kp RBRC   &kp GT     &kp UNDER  &kp PIPE
-&trans     &trans     &kp SQT  &kp DQT   &kp COLON  &kp SEMI     &trans  &kp FSLH   &kp BSLH  &kp QMARK  &kp LANG2  &trans     &trans
+&trans     &trans     &kp SQT  &kp DQT   &kp COLON  &kp SEMI     &trans  &kp FSLH   &kp BSLH  &kp QMARK  &kp LANG2  &kp MINUS  &kp UNDERSCORE
 &trans     &trans     &trans   &trans    &trans     &trans       &trans  &trans     &trans    &trans     &trans     &trans     &trans
 &trans     &trans     &trans   &trans    &trans     &trans       &trans  &trans     &trans    &trans     &trans     &trans
             >;
@@ -215,11 +229,11 @@
 
         layer_2 {
             bindings = <
-&kp GRAVE     &td_f1  &td_f2     &td_f3      &td_f4        &td_f5       &mmv MOVE_UP     &td_f6     &td_f7         &td_f8        &td_f9     &td_f10  &trans
-&trans        &trans  &mkp LCLK  &mkp MCLK   &mkp RCLK     &mkp MB4     &mmv MOVE_DOWN   &kp PG_UP  &kp HOME       &kp UP        &kp END    &td_f11  &td_f12
-&kp CAPSLOCK  &trans  &kp LC(D)  &kp LA(UP)  &kp LA(DOWN)  &mkp MB5     &mmv MOVE_LEFT   &kp PG_DN  &kp LEFT       &kp DOWN      &kp RIGHT  &trans   &trans
-&trans        &kp LC(Z)  &kp LC(X)  &kp LC(C)   &kp LC(V)     &trans    &mmv MOVE_RIGHT  &trans     &kp LC(LS(K))  &kp LC(FSLH)  &trans     &trans   &trans
-&kp C_MUTE    &trans  &trans     &trans      &trans        &trans       &mkp LCLK        &trans     &trans         &trans        &trans     &trans
+&kp GRAVE     &td_f1     &td_f2     &td_f3      &td_f4        &td_f5      &mmv MOVE_UP     &td_f6     &td_f7         &td_f8        &td_f9     &td_f10  &trans
+&trans        &trans     &mkp LCLK  &mkp MCLK   &mkp RCLK     &mkp MB4    &mmv MOVE_DOWN   &kp PG_UP  &kp HOME       &kp UP        &kp END    &td_f11  &td_f12
+&kp CAPSLOCK  &trans     &kp LC(D)  &kp LA(UP)  &kp LA(DOWN)  &mkp MB5    &mmv MOVE_LEFT   &kp PG_DN  &kp LEFT       &kp DOWN      &kp RIGHT  &trans   &trans
+&trans        &kp LC(Z)  &kp LC(X)  &kp LC(C)   &kp LC(V)     &trans      &mmv MOVE_RIGHT  &trans     &kp LC(LS(K))  &kp LC(FSLH)  &trans     &trans   &trans
+&kp C_MUTE    &trans     &trans     &trans      &trans        &trans      &mkp LCLK        &trans     &trans         &trans        &trans     &trans
             >;
 
             display-name = "NAV";
@@ -228,11 +242,11 @@
 
         layer_3 {
             bindings = <
-&trans  &trans  &kp KP_NUM       &trans           &trans           &trans             &trans  &kp EQUAL  &kp FSLH   &kp ASTRK  &kp MINUS  &trans  &trans
-&trans  &trans  &kp KP_NUMBER_7  &kp KP_NUMBER_8  &kp KP_NUMBER_9  &trans             &trans  &kp N7     &kp N8     &kp N9     &kp PLUS   &trans  &trans
-&trans  &trans  &kp KP_NUMBER_4  &kp KP_NUMBER_5  &kp KP_NUMBER_6  &trans             &trans  &kp N4     &kp N5     &kp N6     &kp DOT    &trans  &trans
-&trans  &trans  &kp KP_NUMBER_1  &kp KP_NUMBER_2  &kp KP_NUMBER_3  &kp KP_NUMBER_0    &trans  &kp N1     &kp N2     &kp N3     &kp N0     &trans  &trans
-&trans  &trans  &trans           &trans           &trans           &trans             &trans  &trans     &trans     &trans     &trans     &trans
+&trans  &trans  &kp KP_NUM       &trans           &trans           &trans             &trans  &kp EQUAL  &kp FSLH  &kp ASTRK  &kp MINUS  &trans  &trans
+&trans  &trans  &kp KP_NUMBER_7  &kp KP_NUMBER_8  &kp KP_NUMBER_9  &trans             &trans  &kp N7     &kp N8    &kp N9     &kp PLUS   &trans  &trans
+&trans  &trans  &kp KP_NUMBER_4  &kp KP_NUMBER_5  &kp KP_NUMBER_6  &trans             &trans  &kp N4     &kp N5    &kp N6     &kp DOT    &trans  &trans
+&trans  &trans  &kp KP_NUMBER_1  &kp KP_NUMBER_2  &kp KP_NUMBER_3  &kp KP_NUMBER_0    &trans  &kp N1     &kp N2    &kp N3     &kp N0     &trans  &trans
+&trans  &trans  &trans           &trans           &trans           &trans             &trans  &trans     &trans    &trans     &trans     &trans
             >;
 
             display-name = "NUM";
@@ -254,11 +268,11 @@
 
         layer_5 {
             bindings = <
-&kp ESC    &kp N1  &kp N2  &kp N3    &kp N4     &kp N5     &kp UP_ARROW     &kp N6   &kp N7     &kp N8     &kp N9   &kp N0    &kp BACKSPACE
-&kp TAB    &kp Q   &kp W   &kp E     &kp R      &kp T      &kp DOWN_ARROW   &kp Y    &kp U      &kp I      &kp O    &kp P     &kp BSLH
-&kp LCTRL  &kp A   &kp S   &kp D     &kp F      &kp G      &kp LEFT_ARROW   &kp H    &kp J      &kp K      &kp L    &kp SEMI  &kp APOS
-&kp LSHFT  &kp Z   &kp X   &kp C     &kp V      &kp B      &kp RIGHT_ARROW  &kp N    &kp M      &kp COMMA  &kp DOT  &kp FSLH  &kp RSHFT
-&kp C_MUTE &trans  &trans  &kp LALT  &kp SPACE  &kp SPACE  &kp ENTER        &kp RET  &kp SPACE  &trans     &trans   &kp DELETE
+&kp ESC     &kp N1  &kp N2  &kp N3    &kp N4     &kp N5       &kp UP_ARROW     &kp N6   &kp N7     &kp N8     &kp N9   &kp N0      &kp BACKSPACE
+&kp TAB     &kp Q   &kp W   &kp E     &kp R      &kp T        &kp DOWN_ARROW   &kp Y    &kp U      &kp I      &kp O    &kp P       &kp BSLH
+&kp LCTRL   &kp A   &kp S   &kp D     &kp F      &kp G        &kp LEFT_ARROW   &kp H    &kp J      &kp K      &kp L    &kp SEMI    &kp APOS
+&kp LSHFT   &kp Z   &kp X   &kp C     &kp V      &kp B        &kp RIGHT_ARROW  &kp N    &kp M      &kp COMMA  &kp DOT  &kp FSLH    &kp RSHFT
+&kp C_MUTE  &trans  &trans  &kp LALT  &kp SPACE  &kp SPACE    &kp ENTER        &kp RET  &kp SPACE  &trans     &trans   &kp DELETE
             >;
 
             display-name = "GAME";
