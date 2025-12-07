@@ -132,17 +132,17 @@ layers:
   - {t: '$$mdi:transfer$$', type: trans}
   NAV:
   - {t: '`', s: '~'}
-  - F1
-  - F2
-  - F3
-  - F4
-  - F5
+  - '&td_f1'
+  - '&td_f2'
+  - '&td_f3'
+  - '&td_f4'
+  - '&td_f5'
   - {t: '$$mdi:menu-up$$', s: '$$mdi:mouse$$'}
-  - F6
-  - F7
-  - F8
-  - F9
-  - F10
+  - '&td_f6'
+  - '&td_f7'
+  - '&td_f8'
+  - '&td_f9'
+  - '&td_f10'
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
@@ -155,8 +155,8 @@ layers:
   - HOME
   - $$mdi:arrow-up-bold$$
   - END
-  - F11
-  - F12
+  - '&td_f11'
+  - '&td_f12'
   - $$mdi:apple-keyboard-caps$$
   - {t: '$$mdi:transfer$$', type: trans}
   - Ctl+D
