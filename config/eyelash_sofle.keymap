@@ -75,6 +75,80 @@
             tapping-term-ms = <200>;
             bindings = <&kp ESC>, <&kp GRAVE>;  // 탭: ESC, 더블탭: `
         };
+
+        // F키 탭댄스: 1탭=Fn, 2탭=Ctrl+Fn, 3탭=Alt+Fn
+        td_f1: td_f1 {
+            compatible = "zmk,behavior-tap-dance";
+            #binding-cells = <0>;
+            tapping-term-ms = <250>;
+            bindings = <&kp F1>, <&kp LC(F1)>, <&kp LA(F1)>;
+        };
+        td_f2: td_f2 {
+            compatible = "zmk,behavior-tap-dance";
+            #binding-cells = <0>;
+            tapping-term-ms = <250>;
+            bindings = <&kp F2>, <&kp LC(F2)>, <&kp LA(F2)>;
+        };
+        td_f3: td_f3 {
+            compatible = "zmk,behavior-tap-dance";
+            #binding-cells = <0>;
+            tapping-term-ms = <250>;
+            bindings = <&kp F3>, <&kp LC(F3)>, <&kp LA(F3)>;
+        };
+        td_f4: td_f4 {
+            compatible = "zmk,behavior-tap-dance";
+            #binding-cells = <0>;
+            tapping-term-ms = <250>;
+            bindings = <&kp F4>, <&kp LC(F4)>, <&kp LA(F4)>;
+        };
+        td_f5: td_f5 {
+            compatible = "zmk,behavior-tap-dance";
+            #binding-cells = <0>;
+            tapping-term-ms = <250>;
+            bindings = <&kp F5>, <&kp LC(F5)>, <&kp LA(F5)>;
+        };
+        td_f6: td_f6 {
+            compatible = "zmk,behavior-tap-dance";
+            #binding-cells = <0>;
+            tapping-term-ms = <250>;
+            bindings = <&kp F6>, <&kp LC(F6)>, <&kp LA(F6)>;
+        };
+        td_f7: td_f7 {
+            compatible = "zmk,behavior-tap-dance";
+            #binding-cells = <0>;
+            tapping-term-ms = <250>;
+            bindings = <&kp F7>, <&kp LC(F7)>, <&kp LA(F7)>;
+        };
+        td_f8: td_f8 {
+            compatible = "zmk,behavior-tap-dance";
+            #binding-cells = <0>;
+            tapping-term-ms = <250>;
+            bindings = <&kp F8>, <&kp LC(F8)>, <&kp LA(F8)>;
+        };
+        td_f9: td_f9 {
+            compatible = "zmk,behavior-tap-dance";
+            #binding-cells = <0>;
+            tapping-term-ms = <250>;
+            bindings = <&kp F9>, <&kp LC(F9)>, <&kp LA(F9)>;
+        };
+        td_f10: td_f10 {
+            compatible = "zmk,behavior-tap-dance";
+            #binding-cells = <0>;
+            tapping-term-ms = <250>;
+            bindings = <&kp F10>, <&kp LC(F10)>, <&kp LA(F10)>;
+        };
+        td_f11: td_f11 {
+            compatible = "zmk,behavior-tap-dance";
+            #binding-cells = <0>;
+            tapping-term-ms = <250>;
+            bindings = <&kp F11>, <&kp LC(F11)>, <&kp LA(F11)>;
+        };
+        td_f12: td_f12 {
+            compatible = "zmk,behavior-tap-dance";
+            #binding-cells = <0>;
+            tapping-term-ms = <250>;
+            bindings = <&kp F12>, <&kp LC(F12)>, <&kp LA(F12)>;
+        };
     };
 
     combos {
@@ -141,8 +215,8 @@
 
         layer_2 {
             bindings = <
-&kp GRAVE     &kp F1  &kp F2     &kp F3      &kp F4        &kp F5       &mmv MOVE_UP     &kp F6     &kp F7         &kp F8        &kp F9     &kp F10  &trans
-&trans        &trans  &mkp LCLK  &mkp MCLK   &mkp RCLK     &mkp MB4     &mmv MOVE_DOWN   &kp PG_UP  &kp HOME       &kp UP        &kp END    &kp F11  &kp F12
+&kp GRAVE     &td_f1  &td_f2     &td_f3      &td_f4        &td_f5       &mmv MOVE_UP     &td_f6     &td_f7         &td_f8        &td_f9     &td_f10  &trans
+&trans        &trans  &mkp LCLK  &mkp MCLK   &mkp RCLK     &mkp MB4     &mmv MOVE_DOWN   &kp PG_UP  &kp HOME       &kp UP        &kp END    &td_f11  &td_f12
 &kp CAPSLOCK  &trans  &kp LC(D)  &kp LA(UP)  &kp LA(DOWN)  &mkp MB5     &mmv MOVE_LEFT   &kp PG_DN  &kp LEFT       &kp DOWN      &kp RIGHT  &trans   &trans
 &trans        &kp LC(Z)  &kp LC(X)  &kp LC(C)   &kp LC(V)     &trans    &mmv MOVE_RIGHT  &trans     &kp LC(LS(K))  &kp LC(FSLH)  &trans     &trans   &trans
 &kp C_MUTE    &trans  &trans     &trans      &trans        &trans       &mkp LCLK        &trans     &trans         &trans        &trans     &trans
